@@ -26,8 +26,7 @@ int Factorial(int n){ //Funcion que se encarga de hacer el factorial de un numer
 
 
 int main() {
-    int N;
-    N = valorN(N);
+    int N = valorN(N);
     int VEC[N], FACT[N];
     for(int i=0; i<N; i++) VEC[i] = Vector(i);
     for(int i=0; i<N; i++) FACT[i] = Factorial(VEC[i]);
