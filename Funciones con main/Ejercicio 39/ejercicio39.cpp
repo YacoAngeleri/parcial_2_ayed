@@ -1,3 +1,10 @@
+/*Ingresar un valor entero N (< 20). A continuación ingresar un conjunto VEC 
+de N componentes. A partir de este conjunto generar otro FACT en el que cada 
+elemento sea el factorial del elemento homólogo de VEC. Finalmente imprimir ambos
+vectores a razón de un valor de cada uno por renglón
+Nota: El programa principal puede tener un máximo de 6 instrucciones.
+*/
+
 #include <iostream>
 using namespace std;
 
