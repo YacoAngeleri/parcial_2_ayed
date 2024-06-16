@@ -6,7 +6,7 @@ componentes. Si la suma de las componentes resulta mayor que cero imprimir las d
 using namespace std;
 
 int main() {
-    int N, suma=0;
+    int N, suma=0, VEC[24];;
     cout << "Ingrese un valor entero N menor a 25: "; //Precondicion: N debe ser menor que 25
     cin >> N;
 
@@ -15,8 +15,6 @@ int main() {
         cout << "El valor de N debe ser menor que 25 y no menor que 0." << endl;
         return 1;
     } */
-
-    int VEC[N];
 
     cout << "Ingrese " << N << " elementos:" << endl;
     for (int i = 0; i < N; i++) {

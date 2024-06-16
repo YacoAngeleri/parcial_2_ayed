@@ -33,8 +33,7 @@ int Factorial(int n){ //Funcion que se encarga de hacer el factorial de un numer
 
 
 int main() {
-    int N = valorN(N);
-    int VEC[N], FACT[N];
+    int N = valorN(N), VEC[19], FACT[19];
     for(int i=0; i<N; i++) VEC[i] = Vector(i);
     for(int i=0; i<N; i++) FACT[i] = Factorial(VEC[i]);
     for(int i=0; i<N; i++) cout << VEC[i] << " " << FACT[i] << endl;

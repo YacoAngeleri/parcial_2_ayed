@@ -6,7 +6,7 @@ y en caso contrario los demás.*/
 using namespace std;
 
 int main() {
-    int N;
+    int N, elementos[29];
     cout << "Ingrese un valor entero N menor a 30: "; //Precondicion: N debe ser menor que 30
     cin >> N;
 
@@ -15,8 +15,6 @@ int main() {
         cout << "El valor de N debe ser menor que 30 y no menor que 0." << endl;
         return 1;
     } */
-
-    int elementos[N];
 
     // Ingresar los N elementos
     cout << "Ingrese " << N << " elementos:" << endl;

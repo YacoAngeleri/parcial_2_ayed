@@ -25,12 +25,9 @@ int main()
         cin >> DOS[i];
     }
     cout << "Conjunto TRES" << endl;
-    for (i=0;i<N;i++)
-    {
-        if(i%2==0)
+    for (i=0;i<N;i+=2) //Rellena un arreglo en posiciones salteadas (pares) con las componentes de UNO
         cout << "TRES[" << i << "] = " << UNO[i] << endl;
-        else
+    for (i=1;i<N;i+=2) //Rellena un arreglo en posiciones salteadas (impares) con las componentes de DOS
         cout << "TRES[" << i << "] = " << DOS[i] << endl;
-    }
     return 0;
 }
