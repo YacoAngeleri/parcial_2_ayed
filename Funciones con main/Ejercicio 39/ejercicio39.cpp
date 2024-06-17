@@ -37,6 +37,5 @@ int main() {
     for(int i=0; i<N; i++) VEC[i] = Vector(i);
     for(int i=0; i<N; i++) FACT[i] = Factorial(VEC[i]);
     for(int i=0; i<N; i++) cout << VEC[i] << " " << FACT[i] << endl;
-
     return 0;
 }

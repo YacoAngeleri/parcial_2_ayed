@@ -16,7 +16,7 @@ MEJORDATO Mayor; //Define un identificador con la estructura declarada
 int main()
 {
     int DATO[14]={0}, nmax, imax, i, N;
-    cout << "Ingresar una valor entero de componentes (menor a 15)" << endl;
+    cout << "Ingresar una valor entero de componentes (menor a 15)" << endl; //Precondicion: N debe ser menor a 15
     cin >> N;
     cout << "Ingrese valores del conjunto" << endl;
     for (i=0;i<N;i++)
@@ -31,6 +31,7 @@ int main()
             imax=i;}
     }
     Mayor.May=nmax;
+    cout << "Numero mayor: " << Mayor.May << ", De indice: " << imax << endl;
     if(imax==0) //Si el numero mayor tiene indice 0, se comparan los numeros a partir de i=1
     {
         i=1;
@@ -41,12 +42,13 @@ int main()
     }
     for (i;i<N;i++)
     {
-        if(i!=imax && DATO[i]>nmax) //Se busca el segundo mayor numero, sin tener en cuenta el primer mayor
+        if(i!=imax && DATO[i]>nmax){ //Se busca el segundo mayor numero, sin tener en cuenta el primer mayor
             nmax = DATO[i];
+            imax = i;
+        }
     }
     Mayor.SigMay=nmax;
-    cout << "Numero mayor: " << Mayor.May << endl;
-    cout << "Siguiente numero mayor: " << Mayor.SigMay << endl;
+    cout << "Siguiente numero mayor: " << Mayor.SigMay << ", De indice: " << imax << endl;
 
     return 0;
 }

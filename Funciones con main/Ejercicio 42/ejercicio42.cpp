@@ -57,7 +57,7 @@ void Recorrer1 (T v[], int num) //Función que recorre una vez el vector
 int main()
 {
     int VALOR[39]={0}, N, i;
-    cout << "Ingresar una valor entero de componentes (menor a 40)" << endl;
+    cout << "Ingresar una valor entero de componentes (menor a 40)" << endl; //Precondicion: N debe ser menor a 40
     cin >> N;
     cout << "Ingrese valores del conjunto" << endl;
     for (i=0;i<N;i++)

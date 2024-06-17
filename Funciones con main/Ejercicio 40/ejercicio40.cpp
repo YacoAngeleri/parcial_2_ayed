@@ -25,6 +25,7 @@ int main() {
     for(int i=0; i<N ; i++){
         suma += VEC[i];
     }
+    cout << "La suma total de las componentes dio: " << suma << endl;
     
     if(suma>0){
         cout << endl << "Las componentes de indice PAR son: " << endl << endl;

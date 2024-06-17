@@ -10,7 +10,7 @@ Diseñar un procedimiento que rellene un arreglo en posiciones salteadas con las
 int main()
 {
     int UNO[29]={0}, DOS[29]={0}, TRES[29]={0}, N, i;
-    cout << "Ingresar una valor entero de componentes (menor a 30)" << endl;
+    cout << "Ingresar una valor entero de componentes (menor a 30)" << endl; //Precondicion: N debe ser menor que 30
     cin >> N;
     cout << "Ingrese valores del conjunto UNO" << endl;
     for (i=0;i<N;i++)
@@ -26,8 +26,13 @@ int main()
     }
     cout << "Conjunto TRES" << endl;
     for (i=0;i<N;i+=2) //Rellena un arreglo en posiciones salteadas (pares) con las componentes de UNO
-        cout << "TRES[" << i << "] = " << UNO[i] << endl;
+        TRES[i] = UNO[i];
     for (i=1;i<N;i+=2) //Rellena un arreglo en posiciones salteadas (impares) con las componentes de DOS
-        cout << "TRES[" << i << "] = " << DOS[i] << endl;
+        TRES[i] = DOS[i];
+
+    cout << "Las componentes del conjunto 3 son: " << endl;
+    for(i=0; i<N; i++){
+    cout << "Indice " << "TRES [" << i << "]: " << TRES[i] << endl; 
+    }
     return 0;
 }

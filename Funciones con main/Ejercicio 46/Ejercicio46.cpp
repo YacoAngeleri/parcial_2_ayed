@@ -1,20 +1,20 @@
 #include<iostream>
 using namespace std;
 
-/*Ejercicio Nro. 46: mío
+/*Ejercicio Nro. 46:
 
 Ingresar dos valores enteros M (< 10) y N (< 15). A continuación ingresar un conjunto A de M elementos y luego otro B de N elementos. Generar e imprimir:
 a) Un conjunto C resultante de la anexión de A y B.
 b) Un conjunto D resultante de la anexión de los elementos distintos de cero de A y B.*/
 
 int main(){
-    int A[9], B[14],C[24],D[24];//La cantidad de elementos de C es la equivalencia a la suma de M+N
+    int A[9], B[14],C[23],D[23];//La cantidad de elementos de C es la equivalencia a la suma de M+N
     int M, N, i, j=0,k=0;
 
-    cout << "Ingrese un valor menor a 10 para M: ";
+    cout << "Ingrese un valor menor a 10 para M: ";//Precondicion: N debe ser menor que 10
     cin  >> M;
 
-    cout << "Ingrese un valor menor a 15 para N: ";
+    cout << "Ingrese un valor menor a 15 para N: ";//Precondicion: N debe ser menor que 15
     cin  >> N;
 
     cout << endl;
