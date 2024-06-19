@@ -8,21 +8,55 @@ A[1] con A[CANT], A[2] con A[N-1], ..... etc.
 b) El conjunto SINOR ordenado de menor a mayor sobre si mismo indicando la posición que ocupaba cada elemento en el conjunto original.
 */
 
-int main () {
+#include <iostream>
+using namespace std;
+
+int main() {
     int CANT;
-    cout << "Introduce un valor (menor a 50): ";
-    cin  >> CANT;
-
-    int SINOR [CANT];
-
-    for (int i = 0; i < CANT; ++i) {
-    SINOR [i] = CANT - i;
-        cout << "SINOR[" << i << "] = " << SINOR [i] << endl;
+    cout << "Ingrese un valor entero CANT (< 50): ";
+    cin >> CANT;
+    if (CANT >= 50) {
+        cout << "CANT debe ser menor que 50" << endl;
+        return 1;
     }
 
-    for (int i = 0; i < CANT; ++i){
-        SINOR [i] = i+1;
-        cout << "SINOR[" << i << "] = " << SINOR [i] << " En la posicion orginal se encontraba en: " << (CANT - 1) - i << endl;
+    int SINOR[CANT];
+    for (int i = 0; i < CANT; i++) {
+        cout << "Ingrese el elemento " << i + 1 << " del conjunto SINOR: ";
+        cin >> SINOR[i];
     }
-    return  0;
+
+    // a) Intercambiar elementos simétricos
+    cout << "Conjunto SINOR simetrico: ";
+    for (int i = 0; i < CANT; i++) {
+        cout << SINOR[CANT - i - 1] << " ";
+    }
+    cout << endl;
+
+    // b) Ordenar el conjunto SINOR y mostrar posición original
+    int temp[CANT];
+    for (int i = 0; i < CANT; i++) {
+        temp[i] = SINOR[i];
+    }
+    for (int i = 0; i < CANT - 1; i++) {
+        for (int j = i + 1; j < CANT; j++) {
+            if (temp[i] > temp[j]) {
+                int aux = temp[i];
+                temp[i] = temp[j];
+                temp[j] = aux;
+            }
+        }
+    }
+    cout << "Conjunto SINOR ordenado: " << endl;
+    for (int i = 0; i < CANT; i++) {
+        for (int j = 0; j < CANT; j++) {
+            if (temp[i] == SINOR[j]) {
+                cout << temp[i] << " (originalmente en posicion " << j + 1 << ") " << endl;
+                break;
+            }
+        }
+    }
+    cout << endl;
+
+    return 0;
 }
